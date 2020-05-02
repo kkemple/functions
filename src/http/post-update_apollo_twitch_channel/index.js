@@ -18,7 +18,7 @@ exports.handler = async function http(req) {
       },
     });
 
-    const { data: mutationData } = await axios.put(
+    axios.put(
       `${updateChannelURL}${userData.data[0].id}`,
       {
         channel: {
@@ -33,10 +33,6 @@ exports.handler = async function http(req) {
     );
   } catch (error) {
     console.log(error.message);
-    return {
-      statusCode: 400,
-      statusText: error.message,
-    };
   }
 
   return {
