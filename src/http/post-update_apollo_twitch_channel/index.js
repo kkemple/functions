@@ -18,6 +18,8 @@ exports.handler = async function http(req) {
       },
     });
 
+    console.log(body.status);
+
     axios.put(
       `${updateChannelURL}${userData.data[0].id}`,
       {
