@@ -1,3 +1,4 @@
+const arc = require("@architect/functions");
 const lunr = require("lunr");
 
 const definitions = require("./data.json");
@@ -21,7 +22,7 @@ const idx = lunr(function () {
   }
 });
 
-exports.handler = async function http({ queryStringParameters }) {
+async function http({ queryStringParameters }) {
   if (!queryStringParameters) {
     return {
       statusCode: 400,
@@ -36,4 +37,6 @@ exports.handler = async function http({ queryStringParameters }) {
     statusCode: 200,
     cors: true,
   };
-};
+}
+
+exports.handler = arc.http.async(http);
