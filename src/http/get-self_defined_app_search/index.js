@@ -34,5 +34,6 @@ exports.handler = async function http({ queryStringParameters }) {
   return {
     body: JSON.stringify(results),
     statusCode: 200,
+    cors: true,
   };
 };
