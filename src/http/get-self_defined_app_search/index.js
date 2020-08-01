@@ -45,6 +45,9 @@ async function http({ queryStringParameters }) {
     body: JSON.stringify(results),
     statusCode: 200,
     cors: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   };
 }
 
