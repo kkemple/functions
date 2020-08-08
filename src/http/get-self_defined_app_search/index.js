@@ -11,7 +11,7 @@ async function http({ queryStringParameters }) {
     }
 
     const { data: definitions } = await axios.get(
-      "https://deploy-preview-213--selfdefined.netlify.app/search.json"
+      "https://deploy-preview-213--selfdefined.netlify.app/search-data.json"
     );
 
     // create a map based on title for faster retrieval in search results
