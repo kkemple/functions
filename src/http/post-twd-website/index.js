@@ -5,6 +5,8 @@ let {
   gql,
 } = require("apollo-server-lambda");
 
+let PublishDirective = require("./PublishDirective");
+
 // Construct a schema, using GraphQL schema language
 let typeDefs = gql`
   type Query {
