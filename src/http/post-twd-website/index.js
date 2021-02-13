@@ -4,6 +4,7 @@ let {
   SchemaDirectiveVisitor,
   gql,
 } = require("apollo-server-lambda");
+let { buildFederatedSchema } = require("@apollo/federation");
 let Pusher = require("pusher");
 
 let PublishDirective = require("./PublishDirective");
