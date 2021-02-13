@@ -4,6 +4,7 @@ let {
   SchemaDirectiveVisitor,
   gql,
 } = require("apollo-server-lambda");
+let Pusher = require("pusher");
 
 let PublishDirective = require("./PublishDirective");
 
