@@ -41,6 +41,7 @@ exports.handler = function (event, context, callback) {
   let server = new ApolloServer({ schema, context: { pusher } });
   let handler = server.createHandler();
 
-  event.body = JSON.stringify(body);
+  console.log(body);
+
   handler(event, context, callback);
 };
